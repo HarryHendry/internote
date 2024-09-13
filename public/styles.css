@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a1b3d;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d83f87;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+   
+    background: #e98074;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    border: 1px solid #a4b3b6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+    background: #44318d;
+}
+
+.blog-post h2 {
+    margin-top: 0;
+}
+
+.blog-post a {
+    color: white;
+    padding: 10px 22px;
+    background-color: #e98074;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.blog-post a:hover {
+    background-color: #ed9c93;
+}
+.create-form, .edit-form, .delete-form {
+    margin-top: 20px;
+}
+
+input[type="text"], textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #44318d;
+    color: white;
+}
+
+button, input[type="submit"] {
+    background-color: #d83f87;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #e6629f;
+}

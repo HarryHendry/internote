@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>InterNote - Take Notes in the Browser!</h1>
+    </header>
+    <div class="container">
+        <% posts.forEach(post => { %>
+            <div class="blog-post">
+                <h2><%= post.title %></h2>
+                <p class="date">Posted on <%= post.date %></p>
+                <p class="content"><%= post.content %></p>
+                <a href="/edit/<%= post.id %>">Edit</a>
+                <form action="/delete/<%= post.id %>" method="POST" class="delete-form">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        <% }) %>
+
+        <form action="/create" method="POST" class="create-form">
+            <input type="text" name="title" placeholder="Post Title" required>
+            <textarea name="content" placeholder="Post Content" rows="5" required></textarea>
+            <input type="submit" value="Create Post">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Created by Harry Hendry</p>
+    </footer>
+</body>
+</html>
